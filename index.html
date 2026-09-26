@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockSense - Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>StockSense</h1>
+            <p>Inventory Management System</p>
+        </div>
+
+        <div class="user">
+            Admin
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Inventory Dashboard</h2>
+            <p>Monitor your products and stock operations.</p>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Stock</h3>
+                <p id="lowStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Out of Stock</h3>
+                <p id="outOfStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+        </section>
+
+        <!-- Products -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Products</h2>
+                <button id="addProductBtn">+ Add Product</button>
+            </div>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>SKU</th>
+                            <th>Category</th>
+                            <th>Unit</th>
+                            <th>Reorder Level</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="productTableBody">
+                        <tr>
+                            <td colspan="6">
+                                No products available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Inventory Operations -->
+        <section class="section">
+
+            <h2>Inventory Operations</h2>
+
+            <div class="operations">
+
+                <button id="receiptBtn">
+                    Receive Stock
+                </button>
+
+                <button id="deliveryBtn">
+                    Deliver Stock
+                </button>
+
+                <button id="transferBtn">
+                    Transfer Stock
+                </button>
+
+                <button id="adjustmentBtn">
+                    Adjust Stock
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Ledger -->
+        <section class="section">
+
+            <h2>Recent Ledger Entries</h2>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Operation</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ledgerTableBody">
+                        <tr>
+                            <td colspan="5">
+                                No ledger entries available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        StockSense Inventory Management System
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
